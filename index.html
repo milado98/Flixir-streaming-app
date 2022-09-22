@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>FLIXIR</title>
+</head>
+<body>
+    <div id="navbar" class="d-flex justify-content-between align-items-center" >
+        <div class="logo">
+            <img src="./img/logo.PNG" alt="Flixir logo">
+        </div>
+        <div class="menu-bar">
+            <button class="nav-close"><i class="bi bi-x-lg fw-bold"></i></button>
+            <ul class="navbar-list">
+                <li><a href="#home" class="navbar-links">Home</a></li>
+                <li><a href="#features" class="navbar-links">Features</a></li>
+                <li><a href="#overview" class="navbar-links">Overview</a></li>
+                <li><a href="#blog" class="navbar-links">Blog</a></li>
+                <li><a href="#" class="navbar-links">Pricing</a></li>
+                <li><a href="#" class="navbar-links">FAQ's</a></li>
+                <li><button class="btn-started">Get Started</button></li>
+            </ul>
+        </div>
+        <button class="nav-open"><i class="bi bi-list"></i></button>
+    </div>
+    <div id="main">
+        <div id="hero-section">
+            <div class="content">
+                <h1 class="hero-title text-white">The most powerful streamer for your devices</h1>
+                <button class="btn-started mt-5">Download Now</button>
+            </div>
+        </div>
+        <div id="download">
+            <ul class="download-list">
+                <li>
+                    <a href="#" class="download-link d-flex flex-column">
+                        <i class="bi bi-apple"></i>
+                        <span>Free download for iPhones</span>
+                    </a>
+                </li>
+                <li>
+                    <img src="./img/music.png" alt="">
+                </li>
+                <li>
+                    <a href="#" class="download-link d-flex flex-column">
+                        <i class="bi bi-android2"></i>
+                        <span>Free download for Androids</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="features">
+            <ul class="features-list">
+                <li class="features-items">
+                    <h3 class="features-item-title text-white">Apple AirPlay</h3>
+                    <p class="features-item-text">You can Stream Songs on your devices from your Apple Music, Thank you for using this feature</p>
+                </li>
+                <li class="features-items">
+                    <h3 class="features-item-title text-white">SONOS Wireless HiFi</h3>
+                    <p class="features-item-text">You can Stream Songs on your devices from your Apple Music, Thank you for using this feature</p>
+                </li>
+            </ul>
+            <figure class="features-banner">
+                <img src="./img/feature-banner-bg.png" alt="audio waveform" class="feature-banner-bg">
+                <img src="./img/feature-banner.png" alt="" class="banner-img">
+            </figure>
+            <ul class="features-list">
+                <li class="features-items">
+                    <h3 class="features-item-title text-white">Samsung Multiroom</h3>
+                    <p class="features-item-text">You can Stream Songs on your devices from your Apple Music, Thank you for using this feature</p>
+                </li>
+                <li class="features-items">
+                    <h3 class="features-item-title text-white">Strategy & Design</h3>
+                    <p class="features-item-text">You can Stream Songs on your devices from your Apple Music, Thank you for using this feature</p>
+                </li>
+            </ul>
+        </div>
+        <div class="overview text-white" id="overview">
+
+            <div class="overview-card">
+
+                <figure class="overview-banner">
+                    <img src="./img/overview-banner.png" alt="overview banner">
+                </figure>
+
+                <div class="overview-content">
+
+                    <h2 class="h2 overview-title">Enjoy your music everywhere!</h2>
+
+                    <p class="overview-text">
+                        You can Stream Songs on your devices from your Apple Music, Thank you for using this feature
+                    </p>
+
+                    <ul class="overview-list">
+
+                        <li class="overview-item">
+                            <i class="bi bi-wifi"></i>
+
+                            <span>Works exactly like original <strong>Apple AirPlay</strong></span>
+                        </li>
+
+                        <li class="overview-item">
+                            <i class="bi bi-music-note-beamed"></i>
+
+                            <span><strong>AirAudio recognizes</strong> if you are listening to your music</span>
+                        </li>
+
+                        <li class="overview-item">
+                            <i class="bi bi-star-fill"></i>
+
+                            <span><strong>Create shortcuts</strong> for your favorite receivers</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="Login container-fluid text-white">
+            <div class="row">
+                <div class="col-lg-6 form-section my-3">
+                    <form action="login" id="form" class="form-body">
+                        <h4 class="pt-5">Welcome Back!</h4>
+                        <p class="login-subheader">let's take you around the world</p>
+                        <div class="mt-3">
+                            <label for="email" class="email-label">Email</label><br>
+                            <input type="email" id="email-input" placeholder="example@hotmail.com" onkeydown="validation()">
+                            <p id="email-error"></p>
+    
+                            <label for="password" class="password-label">Password</label>
+                            <input type="password" id="password-input" placeholder="password should contain at least 8 characters" onkeydown="passwordValidation()">
+                            <span class="eye" onclick="togglePassword ()">
+                                <i class="bi bi-eye-fill eye-open"></i>
+                                <i class="bi bi-eye-slash-fill eye-closed"></i>
+                            </span>
+                            <span id="password-error"></span>
+    
+                            <div class="forgot-password d-flex justify-content-between"> 
+                                <div class="check-box d-flex align-items-center"> 
+                                    <input type="checkbox" name="" id="logged-in">
+                                    <label for="" class="small-text ps-1 pt-1">Keep me logged in for 30 days</label>
+                                </div>
+                                <div class="forgot">
+                                    <a href="#" class="small-text">Forgot password?</a><br>
+                                </div>
+                            </div>
+                            
+    
+                            <button class="fw-bold mb-2 sign-in-btn" type="submit">Sign In</button>
+                            <p class="small-text text-center mb-4">Don't have an account? <span class="text-primary small-text text-center"><a href="#">Sign Up</a></span></p>
+                            <p class="small-text text-center mb-4 hr-lines">or sign in via</p>
+                            <div class="socials-section">
+                                <div class="socials-login d-flex justify-content-center align-items-center">
+                                    <button class="google login-social-image-box"><img src="./img/login-google.png" alt="google"></button>
+                                    <button class="apple login-social-image-box"><img src="./img/login-apple.png" alt="apple"></button>
+                                    <button class="facebook login-social-image-box"><img src="./img/login-facebook.png" alt="facebook"></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="blog text-white" id="blog">
+
+            <h2 class="h2 blog-title">Latest Blog & Stories</h2>
+
+            <ul class="blog-list">
+
+                <li>
+                    <a href="#" class="blog-post">
+
+                        <figure class="blog-banner">
+                            <img src="./img/blog-1.jpg" alt="See How People Are Using Your Website With Hotjar">
+
+                            <time datetime="2022-02-05">05 Fab, 2022</time>
+                        </figure>
+
+                        <div class="blog-content">
+                            <h3 class="h3 blog-post-title">See How People Are Using Your Website With Hotjar</h3>
+
+                            <p class="blog-post-text">
+                                Each time a digital asset is purchased or sold, Sequoir donates a percentage
+                            </p>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="blog-post">
+
+                        <figure class="blog-banner">
+                            <img src="./img/blog-2.jpg" alt="5 Tips to Write Your Own Website Copy">
+
+                            <time datetime="2022-02-06">06 Fab, 2022</time>
+                        </figure>
+
+                        <div class="blog-content">
+                            <h3 class="h3 blog-post-title">5 Tips to Write Your Own Website Copy</h3>
+
+                            <p class="blog-post-text">
+                                Each time a digital asset is purchased or sold, Sequoir donates a percentage
+                            </p>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="blog-post">
+
+                        <figure class="blog-banner">
+                            <img src="./img/blog-3.jpg" alt="5 Brilliant Apps That Will Make Your Life Better">
+
+                            <time datetime="2022-02-10">10 Fab, 2022</time>
+                        </figure>
+
+                        <div class="blog-content">
+                            <h3 class="h3 blog-post-title">5 Brilliant Apps That Will Make Your Life Better</h3>
+
+                            <p class="blog-post-text">
+                                Each time a digital asset is purchased or sold, Sequoir donates a percentage
+                            </p>
+                        </div>
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+    <footer>
+
+		<div class="container text-white">
+
+			<div class="footer-brand">
+
+				<a href="#" class="logo">
+					<img src="./img/logo.PNG" alt="pod logo">
+				</a>
+
+				<p>Follow us on</p>
+
+				<ul class="social-list">
+
+					<li>
+						<a href="#" target="_blank" class="social-link">
+							<i class="bi bi-youtube"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://github.com/milado98" target="_blank" class="social-link">
+							<i class="bi bi-github"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://twitter.com/BPaapi" target="_blank" class="social-link">
+							<i class="bi bi-twitter"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" target="_blank" class="social-link">
+							<i class="bi bi-instagram"></i>
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div class="footer-link-box">
+
+				<ul class="footer-list">
+
+					<li>
+						<h3 class="h5 footer-item-title">Company</h3>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">About Us</a>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">Features</a>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">Pricing</a>
+					</li>
+
+				</ul>
+
+				<ul class="footer-list">
+
+					<li>
+						<h3 class="h5 footer-item-title">Products</h3>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">Blog</a>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">Help Center</a>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">Contact</a>
+					</li>
+
+				</ul>
+
+				<ul class="footer-list">
+
+					<li>
+						<h3 class="h5 footer-item-title">Resources</h3>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">FAQ’S</a>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">Testimonial</a>
+					</li>
+
+					<li>
+						<a href="#" class="footer-link">Terms & Conditions</a>
+					</li>
+
+				</ul>
+
+				<div class="footer-btn-group">
+					<a href="#">
+						<img src="./img/footer-1.png" alt="apple store">
+					</a>
+
+					<a href="#">
+						<img src="./img/footer-2.png" alt="google play store">
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+		<p class="copyright text-white">&copy; Copyrights 2022 BigPaappi All rights reserved.</p>
+
+	</footer>
+    <a href="#top" class="go-top" data-go-top>
+		<i class="bi bi-chevron-up"></i>
+	</a>
+    
+
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
